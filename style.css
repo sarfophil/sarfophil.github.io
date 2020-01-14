@@ -29,6 +29,10 @@ body {
     text-decoration: none;
 }
 
+.content a:hover {
+    color: #d43c1a;
+}
+
 .content {
     padding-top: 50px;
 }
