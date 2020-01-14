@@ -37,6 +37,10 @@ body {
     color: #333333;
 }
 
+.content a:hover {
+    color: #d43c1a;
+}
+
 .content h3 {
     font-size: 20px;
     text-transform: uppercase;
