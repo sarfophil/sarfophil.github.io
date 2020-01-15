@@ -1,55 +1,59 @@
-body{
-    background: rgb(89, 86, 71,1); 
+body {
+    background: rgb(89, 86, 71, 1);
     font-family: 'Ubuntu', sans-serif;
 }
 
-.title{
-    color: rgb(149, 199, 241,1);
+.title {
+    color: rgb(149, 199, 241, 1);
 }
 
-.container p{
+.container {
+    min-height: 90vh;
+}
+
+.container p {
     color: #fff;
 }
 
-.titleDescription{
+.titleDescription {
     padding-top: 10px;
 }
 
-.dashed{
+.dashed {
     background-color: #fff;
 }
 
-h3{
-    color: rgb(149, 199, 241,1);
+h3 {
+    color: rgb(149, 199, 241, 1);
 }
 
-ul > li  {
+ul>li {
     color: #fff;
 }
 
-ul > li > a{
+ul>li>a {
     color: rgb(245, 28, 28);
 }
 
-.imgContainer{
+.imgContainer {
     width: 400px;
 }
 
-.imgContainer img{
+.imgContainer img {
     width: 150px;
     height: 150px;
     float: right;
 }
 
-.imgContainer p{
+.imgContainer p {
     float: left;
     padding-top: 98px;
 }
 
-.happyContainer{
+.happyContainer {
     float: left;
 }
 
-.sadContainer{
+.sadContainer {
     float: right;
 }
