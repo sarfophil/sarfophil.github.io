@@ -17,10 +17,6 @@
         cursor: pointer;
     }
     
-    div {
-        display: none;
-    }
-    
     span:hover+div.name {
         display: block;
     }
@@ -43,6 +39,10 @@
         letter-spacing: 0.25em;
         background-color: #F0F0F0;
         width: 100%;
+    }
+    
+    .strike {
+        text-decoration: line-through;
     }
     
     h2 {
