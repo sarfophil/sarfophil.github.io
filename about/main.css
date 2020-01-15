@@ -1,6 +1,7 @@
 body {
     background: rgb(89, 86, 71, 1);
     font-family: 'Ubuntu', sans-serif;
+    padding: 10px;
 }
 
 .title {
@@ -8,7 +9,7 @@ body {
 }
 
 .container {
-    min-height: 90vh;
+    min-height: 100vh;
 }
 
 .container p {
@@ -43,6 +44,7 @@ ul>li>a {
     width: 150px;
     height: 150px;
     float: right;
+    padding-bottom: 50px;
 }
 
 .imgContainer p {

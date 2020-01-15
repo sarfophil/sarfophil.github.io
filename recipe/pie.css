@@ -1,93 +1,93 @@
-span.under {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-div {
-    display: none;
-}
-
-span:hover+div.name {
-    display: block;
-}
-
-span:hover+div.tea {
-    display: block;
-}
-
-.empha {
-    font-weight: bold;
-}
-
-body {
-    background-image: url("img/silverware.jpg");
-    background-color: white;
-    color: #404040;
-    font-size: 11pt;
-    font-family: Lucida 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Helvetica, sans-serif;
-    padding: 10px;
-}
-
-body li,
-p {
-    font-size: 11pt;
-}
-
-h1 {
-    color: #A4A400;
-    font-family: sans-serif;
-    font-size: 22pt;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: underline;
-    letter-spacing: 0.25em;
-    background-color: #F0F0F0;
-    width: 100%;
-}
-
-h2 {
-    color: #A4A400;
-    font-family: sans-serif;
-    font-size: 18pt;
-    text-align: left;
-    text-decoration: underline;
-    letter-spacing: 0.25em;
-    background-color: #F0F0F0;
-    width: 100%;
-}
-
-.greyBg {
-    width: 100%;
-    background-color: #F0F0F0;
-    height: 200px;
-}
-
-a {
-    color: #A4A400;
-}
-
-ul {
-    list-style-image: url("pie_bullet.png");
-}
-
-.italy {
-    font-style: italic;
-    background-color: #FFFFA8;
-}
-
-.ingredientList {
-    list-style: none;
-    padding-left: 0;
-}
-
-.footerCopyright {
-    float: right;
-}
-
-.footerCopyright>a {
-    float: right;
-}
-
-.footerCopyright>pre {
-    text-align: left !important;
-}
+    body {
+        background-image: url("img/silverware.jpg");
+        background-color: white;
+        color: #404040;
+        font-size: 11pt;
+        font-family: Lucida 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Helvetica, sans-serif;
+        padding: 10px;
+    }
+    
+    body li,
+    p {
+        font-size: 11pt;
+    }
+    
+    span.under {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+    div {
+        display: none;
+    }
+    
+    span:hover+div.name {
+        display: block;
+    }
+    
+    span:hover+div.tea {
+        display: block;
+    }
+    
+    .empha {
+        font-weight: bold;
+    }
+    
+    h1 {
+        color: #A4A400;
+        font-family: sans-serif;
+        font-size: 22pt;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: underline;
+        letter-spacing: 0.25em;
+        background-color: #F0F0F0;
+        width: 100%;
+    }
+    
+    h2 {
+        color: #A4A400;
+        font-family: sans-serif;
+        font-size: 18pt;
+        text-align: left;
+        text-decoration: underline;
+        letter-spacing: 0.25em;
+        background-color: #F0F0F0;
+        width: 100%;
+    }
+    
+    .greyBg {
+        width: 100%;
+        background-color: #F0F0F0;
+        height: 200px;
+    }
+    
+    a {
+        color: #A4A400;
+    }
+    
+    ul {
+        list-style-image: url("pie_bullet.png");
+    }
+    
+    .italy {
+        font-style: italic;
+        background-color: #FFFFA8;
+    }
+    
+    .ingredientList {
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    .footerCopyright {
+        float: right;
+    }
+    
+    .footerCopyright>a {
+        float: right;
+    }
+    
+    .footerCopyright>pre {
+        text-align: left !important;
+    }
