@@ -1,0 +1,50 @@
+.header {
+    background-color: aquamarine;
+    height: 60px;
+    text-align: center;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: rgb(30, 104, 30);
+    height: 30px;
+    width: 100%;
+}
+
+.menu>ul {
+    margin: auto;
+    padding-top: 6px;
+}
+
+.menu>ul>li {
+    display: inline;
+    border: 2px solid;
+    border-left: #000;
+    border-bottom: none;
+    border-top: none;
+    color: #fff;
+}
+
+.column1 {
+    background-color: grey;
+    height: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.column2 {
+    background-color: rgb(158, 157, 157);
+    text-align: center;
+}
+
+.column3 {
+    grid-area: main3;
+    background-color: rgb(87, 78, 78);
+}
+
+.footer {
+    background-color: rgb(30, 104, 30);
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
