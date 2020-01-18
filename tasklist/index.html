@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--
+ Dear Professor, It took me 1 hour to complete this task.
+ Interesting knowledge I gained on this lab was 
+ how I could combine my custom css with boostrap's css.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Task list Philip</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+</head>
+
+<body>
+<div id="menu">
+  <a href="../index.html">Home</a>
+</div>
+
+<header>
+  <span>Task list</span>
+</header>
+
+<main>
+  <section>
+    <form>
+      <div class="col-lg-6">
+        <label for="task">Task</label>
+        <input id="task" type="text" required="required" name="task" class="form-control" placeholder="Breakfast at Tiffanys" />
+      </div>
+
+      <div class="col-lg-6">
+        <label for="requiredBy">Required by</label>
+        <input id="requiredBy" type="date" required="required" class="form-control" name="requiredBy" />
+      </div>
+
+      <div class="col-lg-6">
+        <label for="category">Category</label>
+        <select name="category" id="category" class="form-control">
+          <option value="Personal">Personal</option>
+          <option value="Work">Work</option>
+        </select>
+      </div>
+
+      <nav>
+        <a href="#">Save task</a>
+        <a href="#">Clear task</a>
+      </nav>
+    </form>
+  </section>
+
+  <section>
+    <table class="table list-table">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Due</th>
+        <th>Category</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr>
+        <td>Visit mailroom for package</td>
+        <td>
+          <time datetime="2013-10-14">2020-11-14</time>
+        </td>
+        <td>Personal</td>
+      </tr>
+      <tr class="even-row">
+        <td>
+          Present project to Team members
+        </td>
+        <td>
+          <time datetime="2013-10-14">2020-10-14</time>
+        </td>
+        <td>Work</td>
+      </tr>
+
+      <tr>
+        <td>Meet friends for Meditation</td>
+        <td>
+          <time datetime="2013-10-14">2020-10-14</time>
+        </td>
+        <td>Personal</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <nav>
+      <a href="#">Add task</a>
+    </nav>
+  </section>
+</main>
+
+<footer>You have 3 tasks</footer>
+</body>
+</html>
