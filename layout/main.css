@@ -1,0 +1,100 @@
+body{
+    background-color: green;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.title-container{
+    width: 100%;
+    height: 100px;
+}
+
+.account-user h3,p{
+    color: #fff;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pull-left{
+    float: left;
+}
+
+.account-user{
+    float: right;
+    padding-top: 10px;
+}
+
+.account-user p{
+    text-align: right;
+}
+
+.menu-container{
+    width: 100%;
+}
+
+
+.grid-layout-12{
+    width: 100%;
+}
+
+.grid-layout-4{
+    width: 30%;
+}
+
+.cell-4{
+    margin: 3px; 
+    display: inline-block;
+    width: 210px;
+    height: 100px;
+}
+
+.cell-2{
+    margin: 3px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+.red{
+    background-color: red;
+}
+
+.window-blue{
+    background-color: rgba(0, 153, 255, 0.938);
+    
+}
+
+.orange{
+    background-color: orangered;
+}
+
+.light-green{
+    background-color: lightgreen;
+}
+
+.twitter-blue{
+    background-color: #00acee;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.facebook-blue{
+    background-color: #3b5998;
+}
+
+.deep-red{
+    background-color: tomato;
+}
+
+.green{
+    background-color: rgb(38, 216, 38);
+}
+
+.margin-3{
+    margin-left: 80px;
+}
+
