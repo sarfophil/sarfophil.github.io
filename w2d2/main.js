@@ -20,10 +20,10 @@
     * @param {Array} array 
     */
    function listToArray(array){
-        currentIndex:0
-        processedArray: 
+            
+
         function currentValue(){
-            return;
+            return ;
         }
         return {
             values : 10,
