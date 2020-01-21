@@ -8,4 +8,8 @@ const bod = {
     }
 }
 
-bod.log();
+var x = undefined
+function b(){}
+x = 20
+//b
+function a(){}
