@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+  Dear Professor,
+  It took me 1 hour to complete my lab.
+        ES6 Block scope,Function borrowing,Closures and ES6 <code>for in & for of</code>
+        interesting experience I had from this lab
+        I integrated mocha junit testing library. It's very easy to use and provides feature to group unit testings.
+        Thank you
+  Thank you.  
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>W2D2</title>
+
+    <!-- add mocha css, to show results -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <!-- add mocha framework code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd'); // minimal setup
+    </script>
+    <!-- add chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    Look in the Chrome developer console to see the output. CTRL_SHIFT_J
+
+    <h1>My Javascript Solution</h1>
+    <p>Dear Professor,</p>
+    <p>
+        It took me 1 hour to complete my lab.
+        ES6 Block scope,Function borrowing,Closures,<code>apply() for executing functions</code> and ES6 <code>for in & for of</code>
+        are interesting experience I had from this lab
+        I integrated mocha junit testing library. It's very easy to use and provides feature to group unit testings.
+        Thank you
+    </p>
+    <div id="mocha"></div>
+    <script>
+        mocha.run();
+    </script>
+</body>
+
+</html>

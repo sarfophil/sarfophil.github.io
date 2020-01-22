@@ -16,7 +16,7 @@
    }
 
    /**
-    * reverseArrayInPlace produces new Array
+    * reverseArrayInPlace rearranges element in the same memory location
     * @param {Array} arg 
     */
    function reverseArrayInPlace(arg){
@@ -137,15 +137,29 @@
    }
 
 
-   console.log(listToArray([1,2,3,4,5]));
+   console.log(listToArray([1,2,3]));
    console.log("Deep Equal",deepEqual(user,user1).apply());
    console.log("Reverse Array ["+reverseArray([1,2,3,4])+"]");
-   console.log("Reverse In place "+reverseArrayInPlace([1,2,3,4,7,89,0]))
+   console.log("Reverse In place "+reverseArrayInPlace([1,2,3,4]))
 
    /** Unit Testing */
-//    describe("W2d2JS Practice",function(){
-//        it("reverseArray([1,2,3,4]) should return [4,3,2,1]",function(){
+   describe("W2d2JS Practice",function(){
+       /** Reverse Array */
+       it("reverseArray([1,2,3,4]) should return [4,3,2,1]",function(){
+            assert.equal(reverseArray([1,2,3,4]).toString(),[4,3,2,1].toString())
+       })
 
-//        })
-//    })
+       /** Reverse Array Inplace */
+       it("reverseArrayInPlace([1,2,3,4]) should return [4,3,2,1]",function(){
+            assert.equal(reverseArrayInPlace([1,2,3,4]).toString(),[4,3,2,1].toString())
+       })
+
+       it("listToArray([1,2,3]) should return { value: 1, rest: { value: 2, rest: { value: 3, rest: null } } }",function(){
+           assert.equal(listToArray([1,2,3]).toString(),"[object Object]")
+       })
+
+       it("deepEqual(user,user1) should return true",function(){
+           assert.equal(deepEqual(user,user1).apply(),true)
+       })
+   })
 }
