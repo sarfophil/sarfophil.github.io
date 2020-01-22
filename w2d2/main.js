@@ -1,18 +1,39 @@
 {
    /**
     * reverseArray produces new Array
-    * @param {Array} values 
+    * @param {Array} arg 
     */ 
-   function reverseArray(values){
-
+   function reverseArray(arg){
+        let currentArray = [];
+        let lastIndex = arg.length-1;
+        const reverse = function (){
+            for(index in arg)
+                currentArray.push(arg[lastIndex--])
+            
+            return currentArray;
+        }
+        return reverse.apply();
    }
 
    /**
     * reverseArrayInPlace produces new Array
-    * @param {Array} values 
+    * @param {Array} arg 
     */
-   function reverseArrayInPlace(values){
-
+   function reverseArrayInPlace(arg){
+     const reverse = function (){
+         for(index in arg){
+             //Swaps values until it reaches the middle of the array
+             if(Math.round((arg.length)/2) == index) break;
+             
+             //Computes the last  value {swapIndex} and current value {index} to swap
+             let swapIndex = (arg.length - 1) - index
+             let temp = arg[index]
+             arg[index] = arg[swapIndex]
+             arg[swapIndex] = temp      
+         }
+         return arg
+     }
+     return reverse.apply()
    }
 
    /**
@@ -20,14 +41,94 @@
     * @param {Array} array 
     */
    function listToArray(array){
-            
+        let filteredArray = function processArray(){     
+            let arrayValues = [];     
+            array.forEach(function(value,index){
+                if(index >= 1){
+                    arrayValues.push(value)
+                }
+            })
+            return arrayValues;
+        }       
 
-        function currentValue(){
-            return ;
-        }
-        return {
-            values : 10,
-            rest   : listToArray(array)
-        }
+        return (function(){
+            if(array.length == 1){
+                return {
+                    value : array[0],
+                    rest: null
+                }
+            }else{
+                return {
+                    value : array[0],
+                    rest: listToArray(filteredArray.apply())
+                }
+            }
+        }())
    }
+
+   function deepEqual(arg1,arg2){
+        /** Test is valid object*/
+        const validate = function(argKey1,argKey2){
+            const test = function (){
+                return (typeof this == "object");
+            }
+            return function(){
+                if(test.apply(argKey1) && test.apply(argKey2)){
+                    //Check keys first
+                    if((argKey1.toString() === argKey2.toString())){
+                        let flag = false;
+                        //Check length of both arrays
+                        if(argKey1.length == argKey2.length){
+                            return true;
+                        }else{
+                            return false;
+                        }
+                    }else{
+                        return false;
+                    }
+                } 
+            }
+        }
+
+       const predicate = function(){   
+           const argKey1 = Object.keys(arg1)
+           const argKey2 = Object.keys(arg2) 
+           let flag = true;
+           return function (){
+              if(validate(argKey1,argKey2)){
+                
+                for(key of argKey1){
+                    arg1[key] === arg2[key] ? flag : flag = false;
+                }
+
+              }
+              return flag;       
+           }
+       }
+
+       return predicate.apply()
+   }
+
+
+
+
+   const user = {
+       'id': 1,
+       'name':'Philip Sarfo',
+       'age': 8,
+       'color':'brown'
+   }
+
+   const user1 = {
+        'id': 1,
+        'name':'Philip Sarfo',
+        'age': 8,
+        'color':'brown'
+   }
+
+
+   console.log(listToArray([1,2,3,4,5]));
+   console.log("Deep Equal",deepEqual(user,user1).apply());
+   console.log("Reverse Array ["+reverseArray([1,2,3,4])+"]");
+   console.log("Reverse In place "+reverseArrayInPlace([1,2,3,4,7,89,0]))
 }
