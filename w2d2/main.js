@@ -70,9 +70,14 @@
         /** Test is valid object*/
         const validate = function(argKey1,argKey2){
             const test = function (){
-                return (typeof this == "object");
+                //checks for empty / null context
+                if(this.length == 0){
+                    return false;
+                }     
+                return (typeof this == "object")
             }
             return function(){
+                
                 if(test.apply(argKey1) && test.apply(argKey2)){
                     //Check keys first
                     if((argKey1.toString() === argKey2.toString())){
@@ -86,23 +91,28 @@
                     }else{
                         return false;
                     }
+                }else{
+                    return false;
                 } 
             }
         }
 
        const predicate = function(){   
-           const argKey1 = Object.keys(arg1)
-           const argKey2 = Object.keys(arg2) 
+           const argKey1 = Object.keys(arg1 == null?'':arg1)
+           const argKey2 = Object.keys(arg2 == null?'':arg2) 
            let flag = true;
            return function (){
-              if(validate(argKey1,argKey2)){
+              
+              if(validate(argKey1,argKey2).apply()){
                 
                 for(key of argKey1){
                     arg1[key] === arg2[key] ? flag : flag = false;
                 }
 
-              }
-              return flag;       
+                return flag;
+              }else{
+                  return false;
+              }       
            }
        }
 
@@ -131,4 +141,11 @@
    console.log("Deep Equal",deepEqual(user,user1).apply());
    console.log("Reverse Array ["+reverseArray([1,2,3,4])+"]");
    console.log("Reverse In place "+reverseArrayInPlace([1,2,3,4,7,89,0]))
+
+   /** Unit Testing */
+//    describe("W2d2JS Practice",function(){
+//        it("reverseArray([1,2,3,4]) should return [4,3,2,1]",function(){
+
+//        })
+//    })
 }
