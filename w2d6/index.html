@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+  Dear Professor,
+   
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>W2D6</title>
+
+    <!-- add mocha css, to show results -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <!-- add mocha framework code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd'); // minimal setup
+    </script>
+    <!-- add chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+
+    <h1>My Javascript Solution</h1>
+    <p>Dear Professor,</p>
+    <p> I spent 1 hour to complete this lab. Below are difficulties I encountered
+        <ul>
+            <li>When assigning an object to a prototype using <code>this.prototype</code> in the constructor function,I couldn't access the object. It only worked with
+                <p>this.__proto__</p>. I resolved it by making the constructor function a declarative function and then access the prototype from the variable.
+            </li>
+        </ul>
+    </p>
+    <div id="mocha"></div>
+    <script>
+        mocha.run();
+    </script>
+</body>
+
+</html>

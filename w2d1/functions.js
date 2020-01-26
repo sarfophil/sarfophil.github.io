@@ -27,6 +27,29 @@ function filter(array, predicate) {
 }
 
 
+/**
+ * 
+ * @param {Array} array 
+ * @param {Function} reducer 
+ */
+function reduce(array, reducer, initialValue) {
+    let result = initialValue;
+    for (index in array) {
+        // current value 
+        let currentValue = array[index]
+
+        // previous result
+        let accumulator = result + accumulator
+
+        // adds result to the reducer's result
+        result += reducer.apply(null, accumulator, currentValue, index)
+    }
+
+    return result;
+
+}
+
+
 
 
 let mapResult = map([1, 2, 3, 4], function(value) {
@@ -36,6 +59,8 @@ let mapResult = map([1, 2, 3, 4], function(value) {
 let filterResult = filter([1, 2, 3, 4, 5], function(value) {
     return value > 3;
 })
+
+
 
 console.log(mapResult);
 console.log(filterResult);
