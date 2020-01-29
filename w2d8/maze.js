@@ -1,4 +1,5 @@
 $(function() {
+
     $("#start").click(function() {
 
         $(".boundary").removeClass("youlose");
@@ -25,4 +26,4 @@ $(function() {
 
         });
     });
-})()
+})
