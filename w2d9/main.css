@@ -1,0 +1,24 @@
+.container{
+    display: grid;
+    grid-template-areas: 'sideInput sideInput circleArea circleArea',
+                         'sideInput sideInput circleArea circleArea',
+                         'sideInput sideInput circleArea circleArea',
+                         'sideInput sideInput circleArea circleArea';
+}
+
+.aside{
+    grid-area: sideInput;
+    background-color: black;
+}
+
+.main{
+    grid-area: circleArea;
+    background-color: black;
+}
+
+.circle{
+    height: 70px;
+    width: 70px;
+    border-radius: 56px;
+    background-color:blue;
+}
