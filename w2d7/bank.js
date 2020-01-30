@@ -6,9 +6,11 @@
  */
 class Bank {
 
+
+
     constructor() {
         this._accounts = [
-            new SavingAccount(122, 3),
+            new SavingsAccount(122, 3),
             new CheckingAccount(1223, 100)
         ]
     }
@@ -29,7 +31,7 @@ class Bank {
      * @returns {Account} savings account
      */
     addSavingsAccount(number, interest) {
-        return this._accounts.push(new SavingAccount(number, interest))
+        return this._accounts.push(new SavingsAccount(number, interest))
     }
 
     /**

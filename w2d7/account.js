@@ -13,7 +13,7 @@ class Account {
      */
     constructor(number) {
         this._number = number; // the account number
-        this._balance = 2.0;
+        this._balance = 0.0;
     }
 
     /**
@@ -74,7 +74,7 @@ class Account {
     }
 
     /** */
-    endofMonth() {
+    endOfMonth() {
         return "";
     }
 }

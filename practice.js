@@ -165,8 +165,12 @@ let reduce = (function() {
 
 })();
 
+
+
+
 const grades = makegrade(students, ["b", "b", "b", "b", "b"])
 let reduceResult = reduce([1, 2, 3, 4, 5], function(accumulator, currentValue) {
     return accumulator + currentValue;
 }, 1)
 console.log(reduceResult)
+console.log(new Phil())

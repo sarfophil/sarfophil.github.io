@@ -1,24 +1,26 @@
-.container{
-    display: grid;
-    grid-template-areas: 'sideInput sideInput circleArea circleArea',
-                         'sideInput sideInput circleArea circleArea',
-                         'sideInput sideInput circleArea circleArea',
-                         'sideInput sideInput circleArea circleArea';
-}
-
-.aside{
-    grid-area: sideInput;
-    background-color: black;
-}
-
-.main{
-    grid-area: circleArea;
-    background-color: black;
-}
-
-.circle{
-    height: 70px;
-    width: 70px;
-    border-radius: 56px;
-    background-color:blue;
-}
+        .container {
+            display: grid;
+            grid-template-areas: 'sideInput circleArea circleArea circleArea circleArea';
+            height: 95vh;
+        }
+        
+        .aside {
+            grid-area: sideInput;
+        }
+        
+        .aside div {
+            margin: auto;
+            position: absolute;
+            bottom: 100px;
+            width: 140px;
+        }
+        
+        .aside div>button {
+            background-color: blue;
+            width: 100%;
+            color: #fff;
+        }
+        
+        .main {
+            grid-area: circleArea;
+        }

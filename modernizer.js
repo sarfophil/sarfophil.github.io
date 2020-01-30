@@ -88,3 +88,14 @@ logMe('180cm', '70kg');
         .log("x7 is:" +
             x);
 })()
+
+let x = 10
+
+function a() {
+    x += 3
+    console.log("X-" + x)
+}
+
+setInterval(function() {
+    a()
+}, 100)

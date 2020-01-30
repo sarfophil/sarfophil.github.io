@@ -5,7 +5,7 @@
  * Savings account class
  * Provides saving operations to account
  */
-class SavingAccount extends Account {
+class SavingsAccount extends Account {
 
 
     constructor(number, interest) {
@@ -45,18 +45,15 @@ class SavingAccount extends Account {
      * @returns details of account
      */
     toString() {
-        return 'Account Number: ' + this._number +
-            '\nAccount Type: Savings Account' +
-            '\nBalance: ' + this._balance +
-            '\nInterest:' + this._interest
+        return "SavingsAccount 1: balance: " + this._balance + " interest: " + this._interest
     }
 
     /**
      * Invokes addInterest() and returns a account interest details
      */
-    endofMonth() {
+    endOfMonth() {
         this.addInterest()
-        return "Interest added SavingsAccount 2: balance" + this._balance + " interest: " + this._interest
+        return "Interest added SavingsAccount 1: balance: " + this._balance + " interest: " + this._interest
     }
 
 }
