@@ -1,0 +1,40 @@
+{
+    "puppies":[
+
+        {
+        "pet": "http://mumstudents.org/cs472/2016-03-AS-KL/Sections/8/ajaxpets/images/puppy1.jpeg"
+        },
+    
+        {
+            "pet": "http://mumstudents.org/cs472/2016-03-AS-KL/Sections/8/ajaxpets/images/puppy2.jpeg" 
+        },
+    
+        {
+            "pet": "http://mumstudents.org/cs472/2016-03-AS-KL/Sections/8/ajaxpets/images/puppy3.jpeg" 
+        },
+    
+        {
+            "pet": "http://mumstudents.org/cs472/2016-03-AS-KL/Sections/8/ajaxpets/images/puppy3.jpeg" 
+        },
+    
+        {
+            "pet": "http://mumstudents.org/cs472/2016-03-AS-KL/Sections/8/ajaxpets/images/puppy4.jpeg"
+        }
+    ],
+
+    "kitties":[
+        {
+            "pet":"http://mumstudents.org/cs472/2016-03-AS-KL/Sections/8/ajaxpets/images/kitty1.jpeg"
+        },
+        {
+            "pet":"http://mumstudents.org/cs472/2016-03-AS-KL/Sections/8/ajaxpets/images/kitty2.jpeg"
+        },
+        {
+            "pet":"http://mumstudents.org/cs472/2016-03-AS-KL/Sections/8/ajaxpets/images/kitty3.jpeg"
+        },
+        {
+            "pet":"http://mumstudents.org/cs472/2016-03-AS-KL/Sections/8/ajaxpets/images/kitty3.jpeg"
+        }
+    ]
+}
+
