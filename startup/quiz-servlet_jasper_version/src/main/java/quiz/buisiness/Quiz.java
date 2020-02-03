@@ -11,14 +11,15 @@ public class Quiz {
     private Integer score = 0;
     private List<Question> questions = new ArrayList<>();
     private int currentQuestionIndex = 0;
+    private String currentHint;
 
     public Quiz(){
-        questions.add(new Question("[3, 1, 4, 1, 5, ? ]", "9"));
-        questions.add(new Question("[1, 1, 2, 3, 5, ? ]","8"));
-        questions.add(new Question("[1, 4, 9, 16, 25, ? ]","36"));
-        questions.add(new Question("[2, 3, 5, 7, 11, ? ]","13"));
-        questions.add(new Question("[1, 2, 4, 8, 16, ? ]","32"));
-        questions.add(new Question("[1, 2, 4, 8, 16, ? ]","32"));
+        questions.add(new Question("[3, 1, 4, 1, 5, ? ]", "9","PI"));
+        questions.add(new Question("[1, 1, 2, 3, 5, ? ]","8","Fibonacci"));
+        questions.add(new Question("[1, 4, 9, 16, 25, ? ]","36","Self Multiply"));
+        questions.add(new Question("[2, 3, 5, 7, 11, ? ]","13","Prime"));
+        questions.add(new Question("[1, 2, 4, 8, 16, ? ]","32","n x 2"));
+        questions.add(new Question("[1, 2, 4, 8, 16, ? ]","32","n x 2"));
     }
 
   
@@ -34,7 +35,7 @@ public class Quiz {
         if(question.getAnswer().equals(answer)){
             score++;
             currentQuestionIndex++;
-            log("Correct. Score:"+score+" current question index: "+currentQuestionIndex+" Next question: "+getCurrentQuestion());
+          //  log("Correct. Score:"+score+" current question index: "+currentQuestionIndex+" Next question: "+getCurrentQuestion());
             return true;
         }
 
@@ -54,7 +55,9 @@ public class Quiz {
 
   
     public String getCurrentQuestion() {
-        return questions.get(currentQuestionIndex).getQuestion();
+        Question question = questions.get(currentQuestionIndex);
+        currentHint = question.getHint();
+        return question.getQuestion();
     }
 
     
@@ -70,6 +73,13 @@ public class Quiz {
 
    public void log(String message){
        System.out.println("Calculator: "+message);
+   }
+
+   /**
+    * @return the currentHint
+    */
+   public String getCurrentHint() {
+       return currentHint;
    }
  
 }

@@ -82,6 +82,7 @@ public class QuizServlet extends HttpServlet {
        req.setAttribute("getNumCorrect", quiz.getNumCorrect());
        req.setAttribute("currQuest",currQuest);
        req.setAttribute("error",error);
+       req.setAttribute("hint",quiz.getCurrentHint());
     }
 
 

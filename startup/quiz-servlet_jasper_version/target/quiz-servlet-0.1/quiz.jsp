@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Number Quize</title>
+        <title>Number Quiz</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
@@ -28,10 +28,11 @@
             <p>Guess the next number in the sequence! ${currQuest} </p>
             <p>Your answer:<input type='text' name='answerInput' /></p>
 
-
+            <p><input type="hidden" id="hint" value=${hint} /></p>
             <p style='color:red'>${error}</p>
 
             <p><input type='submit' name='btnNext' value='Next' /></p>
+            <p><input type="button" value="Hint" onclick="javascript:alert(document.getElementById('hint').value)" /> </p>
         </form>
     </body>
 
