@@ -1,22 +1,28 @@
 /**
  * JQuery Lab
  */
-$(function(){
+$(function() {
 
-    $("input[type='radio']").on('change',function(){
+    $("input[type='radio']").on('change', function() {
         const petId = $(this)[0].id;
         $.ajax({
-            'url': 'pet.json',
-            'method':'GET'
-        })
-        .done(function(data){
-            let resp = JSON.parse(data)
-            if(petId === 'kitties'){
-                displayPictures(resp.kitties)
-            }else{
-                displayPictures(resp.puppies)
-            }
-        })
+                'url': 'pet.json',
+                'method': 'GET'
+            })
+            .done(function(data) {
+                let resp = data;
+
+                // Checks type if its still a string
+                if (typeof data === 'string') {
+                    resp = JSON.parse(data)
+                }
+
+                if (petId === 'kitties') {
+                    displayPictures(resp.kitties)
+                } else {
+                    displayPictures(resp.puppies)
+                }
+            })
     })
 
 
@@ -27,15 +33,15 @@ $(function(){
     function displayPictures(data) {
         $("#pictures img").remove()
         data.forEach(element => {
-            const $img = $('<img>',{
-                src:element.pet,
-                width:'200',
-                height:'200'
+            const $img = $('<img>', {
+                src: element.pet,
+                width: '200',
+                height: '200'
             })
             $("#pictures").append($img)
         });
-        
+
     }
 
-    
+
 })
